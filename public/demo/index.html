@@ -1,0 +1,57 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	<script src="/src/angular-http-pool.js"></script>
+</head>
+<body>
+
+	<div ng-controller="demoController">
+		<div ng-repeat="message in messages"> {{message}} </div>
+	</div>
+
+	<script type="text/javascript">
+		var app = angular.module( "demoApp", ["ngHttpPool"] );
+
+		app.controller( 'demoController', function( $scope, httpPool ){
+
+			$scope.messages = [];
+
+			var show = function( result ){
+
+				$scope.messages.push( result );
+			};
+
+            var pool = httpPool.create( 2 );
+
+            pool.listen();
+
+			for( var i =0; i<100 ;i++ ){
+
+				pool.map({
+					method:"get",
+					url:"/",
+					cache:false,
+					params:{
+						id:i
+					}
+				},show);
+			}
+
+            var promise = pool.getPromise();
+
+            promise.then(function(){
+
+				console.log( "all of the callbacks!" );
+			});
+
+		});
+
+		angular.bootstrap( document, [app.name] );
+	</script>
+</body>
+</html>
+
