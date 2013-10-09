@@ -17,7 +17,6 @@ angular.module( "app", [
 ]).controller('ctrl',function( httpPool ){
 
 });
-
 ```
 
 ###Create a instance
