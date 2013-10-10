@@ -71,19 +71,19 @@ promise.then(function(){
 Clone this project.
 
 ```
-git clone http://github.com/SparrowJang/angularjs-http-pool.git
+git clone http://github.com/SparrowJang/ngHttpPool.git
 
-cd angularjs-http-pool
+cd ngHttpPool
 ```
 
-Install the express framework.
+Install the express framework and grunt modules.
 ```
-npm install express
+npm install
 ```
 
 run a server:
 ```
-node index.js
+grunt server
 ```
 
 Finally,open your brower,enter [http://localhost:3000/demo/index.html](http://localhost:3000/demo/index.html).

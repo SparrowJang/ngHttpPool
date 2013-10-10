@@ -1,0 +1,24 @@
+{
+  "name": "ngHttpPool",
+  "main": "public/src/ngHttpPool",
+  "version": "0.0.1",
+  "description": "ngHttpPool ==========",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SparrowJang/ngHttpPool.git"
+  },
+  "author": "Sparrow.jang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SparrowJang/ngHttpPool/issues"
+  },
+  "homepage": "https://github.com/SparrowJang/ngHttpPool",
+  "devDependencies":{
+    "grunt": "~0.4.1",
+    "grunt-open": "~0.2.0",
+    "express":"~3.2.2",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-express":"~1.2.1",
+    "matchdep": "~0.1.2"
+  }
+}
