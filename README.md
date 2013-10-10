@@ -7,6 +7,12 @@ An [Angularjs](http://angularjs.org/) module that is able to limit requests at t
 
 * angularjs
 
+##Install
+
+```
+bower install ngHttpPool
+```
+
 ##Usage
 
 ###Require ngHttpPool and inject the services
