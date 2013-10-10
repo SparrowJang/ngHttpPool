@@ -1,0 +1,11 @@
+{
+  "name": "ngHttpPool",
+  "main": "public/src/ngHttpPool.js",
+  "dependencies": {
+       "angular": ">=1.0.7"
+   }
+  "version": "0.0.1",
+  "homepage": "https://github.com/SparrowJang/ngHttpPool",
+  "description": "An Angularjs module that is able to limit requests at the same time.",
+  "license": "MIT"
+}
