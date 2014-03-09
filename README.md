@@ -36,7 +36,7 @@ var pool = httpPool.create( 2 );
 
 ###Send a request
 
-Set a http [config](http://docs.angularjs.org/api/ng.$http#parameters) by 'map' function:
+Set a http [config](http://docs.angularjs.org/api/ng.$http#parameters) by `map` function:
 
 ```js
 pool.map({method:"get",url:"/"});
