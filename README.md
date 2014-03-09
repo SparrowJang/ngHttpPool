@@ -17,7 +17,7 @@ bower install ngHttpPool
 
 ###Require ngHttpPool and inject the services
 
-```
+```js
 angular.module( "app", [
 	"ngHttpPool"
 ]).controller('ctrl',function( httpPool ){
@@ -30,7 +30,7 @@ angular.module( "app", [
 Limit max request amounts by contructor:
 
 
-```
+```js
 var pool = httpPool.create( 2 );
 ```
 
@@ -38,7 +38,7 @@ var pool = httpPool.create( 2 );
 
 Set a http [config](http://docs.angularjs.org/api/ng.$http#parameters) by 'map' function:
 
-```
+```js
 pool.map({method:"get",url:"/"});
 ```
 
@@ -49,14 +49,14 @@ pool.map({method:"get",url:"/"}, success, error);
 
 ###Send some requests and get all of the callbacks.
 
-Create a 'defer'.
-```
+Create a `defer`.
+```js
 pool.listen()
 ```
 
 Add and run requests to pool.
-```
 
+```js
 for( var index = 0; index<10 ; index++ ){
 
   pool.map({method:"get",url:"/",params:{id:index}});
@@ -64,7 +64,8 @@ for( var index = 0; index<10 ; index++ ){
 ```
 
 Get a promise of callbacks.
-```
+
+```js
 var promise = pool.Promise();
 
 promise.then(function(){
