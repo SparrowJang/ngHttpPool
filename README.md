@@ -3,19 +3,19 @@ ngHttpPool
 
 An [Angularjs](http://angularjs.org/) module that is able to limit requests at the same time.
 
-##Dependency
+## Dependency
 
 * angularjs
 
-##Install
+## Install
 
 ```
 bower install ngHttpPool
 ```
 
-##Usage
+## Usage
 
-###Require ngHttpPool and inject the services
+### Require ngHttpPool and inject the services
 
 ```js
 angular.module( "app", [
@@ -25,7 +25,7 @@ angular.module( "app", [
 });
 ```
 
-###Create a instance
+### Create a instance
 
 Limit max request amounts by contructor:
 
@@ -34,7 +34,7 @@ Limit max request amounts by contructor:
 var pool = httpPool.create( 2 );
 ```
 
-###Send a request
+### Send a request
 
 Set a http [config](http://docs.angularjs.org/api/ng.$http#parameters) by `map` function:
 
@@ -47,7 +47,7 @@ pool.map({method:"get",url:"/"});
 pool.map({method:"get",url:"/"}, success, error);
 ```
 
-###Send some requests and get all of the callbacks.
+### Send some requests and get all of the callbacks.
 
 Create a `defer`.
 ```js
@@ -73,7 +73,7 @@ promise.then(function(){
 });
 ```
 
-##Demo
+## Demo
 
 Clone this project.
 
